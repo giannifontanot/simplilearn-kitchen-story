@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'simplilearn-kitchen-story';
+  pageTitle = 'Kitchen Story';
+
+  activeTab = 'search';
+
+  search(activeTab: string){
+    this.activeTab = activeTab;
+  }
+
+  result(activeTab: string){
+    this.activeTab = activeTab;
+  }
 }
