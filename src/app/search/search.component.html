@@ -1,1 +1,28 @@
-<p>search works!</p>
+<div class="row">
+  <div class="row">
+
+  <div class="row">
+    <input type="text" [(ngModel)]="listFilter">
+    <button (click)="search()">search</button>
+  </div>
+
+  <div>
+    <div class="row" *ngFor="let product of productsFiltered">
+      <div class="row"> this is a test{{product.productName}}</div>
+      <div class="row">this is a test</div>
+      <div class="row">this is a test</div>
+      <div class="row">this is a test</div>
+    </div>
+  </div>
+
+  <!--
+  |----------------|
+  | search    send |
+  |----------------|
+  | - item 1 ------|
+  | - item 2 ------|
+  | - item 3 ------|
+  |----------------|
+  -->
+  </div>
+  </div>
