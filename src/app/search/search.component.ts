@@ -1,38 +1,33 @@
-import { Component, OnInit } from '@angular/core';
-import {IProduct} from "./product";
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {IFood} from "./food";
+import {SearchService} from "./search.service";
+import {Subscription} from "rxjs";
 
 @Component({
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements OnInit {
-products: IProduct[] = [
-  {
-    "productId": 1,
-    "productName": "asparagus",
-    "price": 3
-  },
-  {
-    "productId": 2,
-    "productName": "apples",
-    "price": 1.3
-  }
-]
-  productsFiltered: IProduct[] = [];
-  listFilter: string = 'asp';
-  constructor() { }
+export class SearchComponent implements OnInit, OnDestroy {
+
+  foodsFiltered: IFood[] = [];
+  listFilter: string = 'apple';
+  sub!: Subscription;
+  constructor(private searchService: SearchService) { }
 
   ngOnInit(): void {
-    this.productsFiltered = this.products.filter(
-      product => product.productName.toLowerCase().includes(this.listFilter.toLowerCase())
-    );
+   // foodsFiltered = food.foodName.toLowerCase().includes(this.listFilter.toLowerCase())
+
   }
 
   search() {
-    this.productsFiltered = this.products.filter(
-      product => product.productName.toLowerCase().includes(this.listFilter.toLowerCase())
+  //////  alert();
+    this.foodsFiltered = this.searchService.getFoods().filter(
+      food => food.foodName.toLowerCase().includes(this.listFilter.toLowerCase())
     );
+  }
 
+  ngOnDestroy(): void {
+    // this.sub.unsubscribe();
   }
 
 }

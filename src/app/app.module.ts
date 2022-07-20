@@ -26,8 +26,9 @@ import {FormsModule} from "@angular/forms";
 export class AppModule { }
 
 // TODO - SEARCH
-// TODO -   create a form to search for a product
 // TODO -   use the http service to get the data from the json file
+// TODO -     use a service to get the data
+// TODO -     use subscribe,
 // TODO -   select foods and send to the buying table
 // TODO -   present the checkout list on screen
 // TODO - LOGIN
