@@ -1,0 +1,656 @@
+[
+  {
+    "foodId": 1,
+    "foodName": "asparagus",
+    "price": 0.50},
+  {
+    "foodId": 2,
+    "foodName": "apples",
+    "price": 1.2
+  },
+  {
+    "foodId": 3,
+    "foodName": "avocado",
+    "price": 1.2
+  },
+  {
+    "foodId": 4,
+    "foodName": "alfalfa",
+    "price": 2.7
+  },
+  {
+    "foodId": 5,
+    "foodName": "acorn squash",
+    "price": 1.2
+  },
+  {
+    "foodId": 6,
+    "foodName": "almond",
+    "price": 0.6
+  },
+  {
+    "foodId": 7,
+    "foodName": "arugala",
+    "price": 2.1
+  },
+  {
+    "foodId": 8,
+    "foodName": "artichoke",
+    "price": 2.7
+  },
+  {
+    "foodId": 9,
+    "foodName": "applesauce",
+    "price": 1.2
+  },
+  {
+    "foodId": 10,
+    "foodName": "asian noodles",
+    "price": 0.3
+  },
+  {
+    "foodId": 11,
+    "foodName": "antelope",
+    "price": 0.3
+  },
+  {
+    "foodId": 12,
+    "foodName": "ahi tuna ",
+    "price": 1.5
+  },
+  {
+    "foodId": 13,
+    "foodName": "albacore tuna",
+    "price": 0.9
+  },
+  {
+    "foodId": 14,
+    "foodName": "Apple juice",
+    "price": 1.5
+  },
+  {
+    "foodId": 15,
+    "foodName": "Avocado roll",
+    "price": 2.7
+  },
+  {
+    "foodId": 16,
+    "foodName": "Bruscetta",
+    "price": 0.6
+  },
+  {
+    "foodId": 17,
+    "foodName": "bacon",
+    "price": 2.4
+  },
+  {
+    "foodId": 18,
+    "foodName": "black beans",
+    "price": 0.6
+  },
+  {
+    "foodId": 19,
+    "foodName": "bagels",
+    "price": 2.4
+  },
+  {
+    "foodId": 20,
+    "foodName": "baked beans",
+    "price": 2.4
+  },
+  {
+    "foodId": 21,
+    "foodName": "BBQ",
+    "price": 0.3
+  },
+  {
+    "foodId": 22,
+    "foodName": "bison",
+    "price": 3
+  },
+  {
+    "foodId": 23,
+    "foodName": "barley",
+    "price": 1.2
+  },
+  {
+    "foodId": 24,
+    "foodName": "beer",
+    "price": 0.6
+  },
+  {
+    "foodId": 25,
+    "foodName": "bisque",
+    "price": 1.2
+  },
+  {
+    "foodId": 26,
+    "foodName": "bluefish",
+    "price": 1.2
+  },
+  {
+    "foodId": 27,
+    "foodName": "bread",
+    "price": 0.6
+  },
+  {
+    "foodId": 28,
+    "foodName": "broccoli",
+    "price": 2.1
+  },
+  {
+    "foodId": 29,
+    "foodName": "buritto",
+    "price": 1.5
+  },
+  {
+    "foodId": 30,
+    "foodName": "babaganoosh",
+    "price": 0.6
+  },
+  {
+    "foodId": 31,
+    "foodName": "Cabbage",
+    "price": 3
+  },
+  {
+    "foodId": 32,
+    "foodName": "cake",
+    "price": 2.4
+  },
+  {
+    "foodId": 33,
+    "foodName": "carrots",
+    "price": 2.4
+  },
+  {
+    "foodId": 34,
+    "foodName": "carne asada",
+    "price": 1.2
+  },
+  {
+    "foodId": 35,
+    "foodName": "celery",
+    "price": 0.3
+  },
+  {
+    "foodId": 36,
+    "foodName": "cheese",
+    "price": 2.7
+  },
+  {
+    "foodId": 37,
+    "foodName": "chicken",
+    "price": 2.7
+  },
+  {
+    "foodId": 38,
+    "foodName": "catfish",
+    "price": 2.1
+  },
+  {
+    "foodId": 39,
+    "foodName": "chips",
+    "price": 1.5
+  },
+  {
+    "foodId": 40,
+    "foodName": "chocolate",
+    "price": 1.8
+  },
+  {
+    "foodId": 41,
+    "foodName": "chowder",
+    "price": 0.3
+  },
+  {
+    "foodId": 42,
+    "foodName": "clams",
+    "price": 1.8
+  },
+  {
+    "foodId": 43,
+    "foodName": "coffee",
+    "price": 0.9
+  },
+  {
+    "foodId": 44,
+    "foodName": "cookies",
+    "price": 1.8
+  },
+  {
+    "foodId": 45,
+    "foodName": "corn",
+    "price": 0.9
+  },
+  {
+    "foodId": 46,
+    "foodName": "cupcakes",
+    "price": 1.8
+  },
+  {
+    "foodId": 47,
+    "foodName": "crab",
+    "price": 2.7
+  },
+  {
+    "foodId": 48,
+    "foodName": "curry",
+    "price": 2.1
+  },
+  {
+    "foodId": 49,
+    "foodName": "cereal",
+    "price": 1.8
+  },
+  {
+    "foodId": 50,
+    "foodName": "chimichanga",
+    "price": 2.1
+  },
+  {
+    "foodId": 51,
+    "foodName": "dates",
+    "price": 2.1
+  },
+  {
+    "foodId": 52,
+    "foodName": "dips",
+    "price": 1.2
+  },
+  {
+    "foodId": 53,
+    "foodName": "duck",
+    "price": 0.3
+  },
+  {
+    "foodId": 54,
+    "foodName": "dumplings",
+    "price": 3
+  },
+  {
+    "foodId": 55,
+    "foodName": "donuts",
+    "price": 2.4
+  },
+  {
+    "foodId": 56,
+    "foodName": "eggs",
+    "price": 0.9
+  },
+  {
+    "foodId": 57,
+    "foodName": "enchilada",
+    "price": 0.6
+  },
+  {
+    "foodId": 58,
+    "foodName": "eggrolls",
+    "price": 1.8
+  },
+  {
+    "foodId": 59,
+    "foodName": "English muffins",
+    "price": 3
+  },
+  {
+    "foodId": 60,
+    "foodName": "edimame",
+    "price": 3
+  },
+  {
+    "foodId": 61,
+    "foodName": "eel sushi",
+    "price": 0.6
+  },
+  {
+    "foodId": 62,
+    "foodName": "fajita",
+    "price": 0.3
+  },
+  {
+    "foodId": 63,
+    "foodName": "falafel",
+    "price": 1.2
+  },
+  {
+    "foodId": 64,
+    "foodName": "fish  (might be too vague)",
+    "price": 2.7
+  },
+  {
+    "foodId": 65,
+    "foodName": "franks",
+    "price": 2.1
+  },
+  {
+    "foodId": 66,
+    "foodName": "fondu",
+    "price": 3
+  },
+  {
+    "foodId": 67,
+    "foodName": "French toast",
+    "price": 2.7
+  },
+  {
+    "foodId": 68,
+    "foodName": "French dip",
+    "price": 0.3
+  },
+  {
+    "foodId": 69,
+    "foodName": "Garlic",
+    "price": 1.8
+  },
+  {
+    "foodId": 70,
+    "foodName": "ginger",
+    "price": 0.6
+  },
+  {
+    "foodId": 71,
+    "foodName": "gnocchi",
+    "price": 3
+  },
+  {
+    "foodId": 72,
+    "foodName": "goose",
+    "price": 0.9
+  },
+  {
+    "foodId": 73,
+    "foodName": "granola",
+    "price": 1.2
+  },
+  {
+    "foodId": 74,
+    "foodName": "grapes",
+    "price": 1.5
+  },
+  {
+    "foodId": 75,
+    "foodName": "green beans",
+    "price": 2.4
+  },
+  {
+    "foodId": 76,
+    "foodName": "Guancamole",
+    "price": 0.6
+  },
+  {
+    "foodId": 77,
+    "foodName": "gumbo",
+    "price": 0.9
+  },
+  {
+    "foodId": 78,
+    "foodName": "grits",
+    "price": 2.1
+  },
+  {
+    "foodId": 79,
+    "foodName": "Graham crackers",
+    "price": 1.5
+  },
+  {
+    "foodId": 80,
+    "foodName": "ham",
+    "price": 0.3
+  },
+  {
+    "foodId": 81,
+    "foodName": "halibut",
+    "price": 2.1
+  },
+  {
+    "foodId": 82,
+    "foodName": "hamburger",
+    "price": 2.4
+  },
+  {
+    "foodId": 83,
+    "foodName": "honey",
+    "price": 1.5
+  },
+  {
+    "foodId": 84,
+    "foodName": "huenos rancheros",
+    "price": 1.5
+  },
+  {
+    "foodId": 85,
+    "foodName": "hash browns",
+    "price": 0.9
+  },
+  {
+    "foodId": 86,
+    "foodName": "hot dogs",
+    "price": 0.3
+  },
+  {
+    "foodId": 87,
+    "foodName": "haiku roll",
+    "price": 3
+  },
+  {
+    "foodId": 88,
+    "foodName": "hummus",
+    "price": 0.3
+  },
+  {
+    "foodId": 89,
+    "foodName": "ice cream",
+    "price": 1.5
+  },
+  {
+    "foodId": 90,
+    "foodName": "Irish stew",
+    "price": 2.4
+  },
+  {
+    "foodId": 91,
+    "foodName": "Indian food",
+    "price": 1.5
+  },
+  {
+    "foodId": 92,
+    "foodName": "Italian bread",
+    "price": 2.4
+  },
+  {
+    "foodId": 93,
+    "foodName": "jambalaya",
+    "price": 1.5
+  },
+  {
+    "foodId": 94,
+    "foodName": "jelly / jam",
+    "price": 2.4
+  },
+  {
+    "foodId": 95,
+    "foodName": "jerky",
+    "price": 2.1
+  },
+  {
+    "foodId": 96,
+    "foodName": "jalapeño",
+    "price": 0.9
+  },
+  {
+    "foodId": 97,
+    "foodName": "kale",
+    "price": 2.1
+  },
+  {
+    "foodId": 98,
+    "foodName": "kabobs",
+    "price": 2.7
+  },
+  {
+    "foodId": 99,
+    "foodName": "ketchup",
+    "price": 0.6
+  },
+  {
+    "foodId": 100,
+    "foodName": "kiwi",
+    "price": 1.2
+  },
+  {
+    "foodId": 101,
+    "foodName": "kidney beans",
+    "price": 1.2
+  },
+  {
+    "foodId": 102,
+    "foodName": "kingfish",
+    "price": 0.9
+  },
+  {
+    "foodId": 103,
+    "foodName": "lobster",
+    "price": 1.8
+  },
+  {
+    "foodId": 104,
+    "foodName": "Lamb",
+    "price": 1.8
+  },
+  {
+    "foodId": 105,
+    "foodName": "Linguine",
+    "price": 0.3
+  },
+  {
+    "foodId": 106,
+    "foodName": "Lasagna",
+    "price": 2.1
+  },
+  {
+    "foodId": 107,
+    "foodName": "Meatballs",
+    "price": 3
+  },
+  {
+    "foodId": 108,
+    "foodName": "Moose",
+    "price": 1.2
+  },
+  {
+    "foodId": 109,
+    "foodName": "Milk",
+    "price": 1.2
+  },
+  {
+    "foodId": 110,
+    "foodName": "Milkshake",
+    "price": 0.6
+  },
+  {
+    "foodId": 111,
+    "foodName": "Noodles",
+    "price": 0.3
+  },
+  {
+    "foodId": 112,
+    "foodName": "Ostrich",
+    "price": 1.5
+  },
+  {
+    "foodId": 113,
+    "foodName": "Pizza",
+    "price": 0.3
+  },
+  {
+    "foodId": 114,
+    "foodName": "Pepperoni",
+    "price": 2.1
+  },
+  {
+    "foodId": 115,
+    "foodName": "Porter",
+    "price": 0.3
+  },
+  {
+    "foodId": 116,
+    "foodName": "Pancakes",
+    "price": 1.8
+  },
+  {
+    "foodId": 117,
+    "foodName": "Quesadilla",
+    "price": 1.5
+  },
+  {
+    "foodId": 118,
+    "foodName": "Quiche",
+    "price": 2.1
+  },
+  {
+    "foodId": 119,
+    "foodName": "Reuben",
+    "price": 0.3
+  },
+  {
+    "foodId": 120,
+    "foodName": "Spinach",
+    "price": 1.2
+  },
+  {
+    "foodId": 121,
+    "foodName": "Spaghetti",
+    "price": 0.6
+  },
+  {
+    "foodId": 122,
+    "foodName": "Tater tots",
+    "price": 1.5
+  },
+  {
+    "foodId": 123,
+    "foodName": "Toast",
+    "price": 1.2
+  },
+  {
+    "foodId": 124,
+    "foodName": "? (any ideas)",
+    "price": 0.3
+  },
+  {
+    "foodId": 125,
+    "foodName": "Venison",
+    "price": 1.5
+  },
+  {
+    "foodId": 126,
+    "foodName": "Waffles",
+    "price": 1.5
+  },
+  {
+    "foodId": 127,
+    "foodName": "Wine",
+    "price": 0.9
+  },
+  {
+    "foodId": 128,
+    "foodName": "Walnuts",
+    "price": 2.4
+  },
+  {
+    "foodId": 129,
+    "foodName": "Yogurt",
+    "price": 0.3
+  },
+  {
+    "foodId": 130,
+    "foodName": "Ziti",
+    "price": 2.1
+  },
+  {
+    "foodId": 131,
+    "foodName": "Zucchini",
+    "price": 3
+  }
+]
