@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './search/search.component';
 import {FormsModule} from "@angular/forms";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {FormsModule} from "@angular/forms";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
       {path: 'search', component: SearchComponent},
@@ -26,9 +28,6 @@ import {FormsModule} from "@angular/forms";
 export class AppModule { }
 
 // TODO - SEARCH
-// TODO -   use the http service to get the data from the json file
-// TODO -     use a service to get the data
-// TODO -     use subscribe,
 // TODO -   select foods and send to the buying table
 // TODO -   present the checkout list on screen
 // TODO - LOGIN
