@@ -22,7 +22,7 @@ export class SearchService {
   }
 
   handleError(error: HttpErrorResponse) {
-    let errorMessage = '';
+    let errorMessage
     if (error.error instanceof ErrorEvent) {
       errorMessage = `An error occurred: ${error.error.message}`;
     } else {
