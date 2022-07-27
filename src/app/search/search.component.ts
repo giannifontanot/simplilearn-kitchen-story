@@ -4,30 +4,54 @@ import {SearchService} from "./search.service";
 import {Subscription} from "rxjs";
 
 @Component({
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+    templateUrl: './search.component.html',
+    styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit, OnDestroy {
 
-  foodsFiltered: IFood[] = [];
-  listFilter: string = 'apple';
-  sub!: Subscription;
-  constructor(private searchService: SearchService) { }
+    foodsFiltered: IFood[] = [];
+    foods: IFood[] = [];
+    listFilter: string = 'apple';
+    sub!: Subscription;
 
-  ngOnInit(): void {
-   // foodsFiltered = food.foodName.toLowerCase().includes(this.listFilter.toLowerCase())
+    constructor(private searchService: SearchService) {
+    }
 
-  }
+    ngOnInit(): void {
+        this.sub = this.searchService.getFoods().subscribe({
+            next: data => {
+                this.foods = data;
+                this.foodsFiltered = this.foods;
+                return this.foodsFiltered;
+            },
+            error: err => alert(err)
+        });
 
-  search() {
-  //////  alert();
-    this.foodsFiltered = this.searchService.getFoods().filter(
-      food => food.foodName.toLowerCase().includes(this.listFilter.toLowerCase())
-    );
-  }
+    }
 
-  ngOnDestroy(): void {
-    // this.sub.unsubscribe();
-  }
+    search() {
+        ////  alert();
+        this.sub = this.searchService.getFoods().subscribe({
+            next: data => {
+                this.foods = data
+                this.foodsFiltered = this.foods.filter(
+                    food => food.foodName.toLowerCase().includes(
+                        this.listFilter.toLowerCase()
+                    )
+                )
+            },
+            error: err => alert(err),
 
+        });
+    }
+
+    ngOnDestroy(): void {
+        //this.sub.unsubscribe();
+        //food => food.foodName.toLowerCase()
+        // .includes(this.listFilter.toLowerCase()
+    }
+
+    select(foodId: number) {
+alert(foodId)
+    }
 }
