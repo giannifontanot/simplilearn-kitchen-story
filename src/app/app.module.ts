@@ -6,12 +6,16 @@ import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './search/search.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './cart/checkout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SearchComponent
+    SearchComponent,
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +23,7 @@ import {HttpClientModule} from "@angular/common/http";
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
       {path: 'search', component: SearchComponent},
+      {path: 'cart', component: CartComponent},
     ]),
     FormsModule
   ],

@@ -1,0 +1,26 @@
+<div class='row' >
+
+    <div class="col-md-1"></div>
+    <div class="col-md-1">Name</div>
+    <div class="col-md-1">Price</div>
+    <div class="col-md-9">Total: {{total|currency}}</div>
+</div>
+
+<div class='row' *ngFor="let food of cart">
+    <div class="col-md-1">
+        <button
+                (click)="removeItem(food)"
+                class="btn btn-outline-danger">delete</button>
+    </div>
+    <div class="col-md-1">
+        <p>{{food.foodName}}
+
+    </div>
+    <div class="col-md-1">
+        <p>{{food.price|currency}}
+
+    </div>
+    <div class="col-md-9">
+
+    </div>
+</div>
