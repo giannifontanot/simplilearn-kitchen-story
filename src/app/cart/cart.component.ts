@@ -1,0 +1,27 @@
+import { Component, OnInit } from '@angular/core';
+import {SearchService} from "../search/search.service";
+import {FormBuilder} from "@angular/forms";
+import {IFood} from "../search/food";
+
+@Component({
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.css']
+})
+export class CartComponent implements OnInit {
+  cart: IFood[] = [];
+  total: number = this.searchService.absoluteTotal;
+  constructor(private searchService: SearchService,
+              private formBuilder: FormBuilder) { }
+
+  ngOnInit(): void {
+    this.cart = this.searchService.getCart();
+    this.searchService.getTotal()
+    this.total = this.searchService.getTotal()
+  }
+
+
+  removeItem(food: IFood) {
+    this.searchService.removeItem(food)
+    this.total = this.searchService.getTotal()
+  }
+}

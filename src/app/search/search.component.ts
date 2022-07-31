@@ -11,6 +11,7 @@ export class SearchComponent implements OnInit, OnDestroy {
 
     foodsFiltered: IFood[] = [];
     foods: IFood[] = [];
+    cart: IFood [] = []
     listFilter: string = 'apple';
     sub!: Subscription;
 
@@ -51,7 +52,7 @@ export class SearchComponent implements OnInit, OnDestroy {
         // .includes(this.listFilter.toLowerCase()
     }
 
-    select(foodId: number) {
-alert(foodId)
+    select(food: IFood) {
+        this.searchService.addToCart(food);
     }
 }

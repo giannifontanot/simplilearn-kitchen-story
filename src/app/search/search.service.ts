@@ -10,6 +10,8 @@ import {catchError, tap} from "rxjs/operators";
 })
 export class SearchService {
   foodUrl: string = 'api/foods.json';
+  cart: IFood[] = [];
+  absoluteTotal: number = 0;
 
   constructor(private http: HttpClient) {  }
 
@@ -18,7 +20,6 @@ export class SearchService {
     tap(data=>console.log('All', JSON.stringify(data))),
     catchError(this.handleError)
     );
-
   }
 
   handleError(error: HttpErrorResponse) {
@@ -30,6 +31,29 @@ export class SearchService {
     }
     console.error(errorMessage);
     return throwError(errorMessage);
+  }
+
+  addToCart(food: IFood){
+    this.cart.push(food);
+
+  }
+
+  getCart(){
+    return this.cart;
+  }
+
+  removeItem(food: IFood){
+
+    let foodIdToDelete = (element: { foodId: number; }) => food.foodId === element.foodId;
+
+    let index = this.cart.findIndex(foodIdToDelete)
+    this.cart.splice(index,1)
+  }
+
+  getTotal(): number {
+    this.absoluteTotal = 0;
+    this.cart.forEach(item=> this.absoluteTotal += item.price)
+    return this.absoluteTotal;
   }
 }
 
