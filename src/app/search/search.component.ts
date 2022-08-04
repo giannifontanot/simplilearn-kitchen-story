@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {IFood} from "./food";
+import {IFood} from "../model/food";
 import {SearchService} from "./search.service";
 import {Subscription} from "rxjs";
 

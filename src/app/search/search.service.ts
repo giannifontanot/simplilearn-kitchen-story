@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {IFood} from "./food";
+import {IFood} from "../model/food";
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {Observable, throwError} from "rxjs";
 import {catchError, tap} from "rxjs/operators";
@@ -9,7 +9,8 @@ import {catchError, tap} from "rxjs/operators";
   providedIn: 'root'
 })
 export class SearchService {
-  foodUrl: string = 'api/foods.json';
+  // foodUrl: string = 'api/foods.json';
+  foodUrl: string = 'https://62e8570a249bb1284ead379a.mockapi.io/api/v1/foods';
   cart: IFood[] = [];
   absoluteTotal: number = 0;
 
@@ -38,7 +39,7 @@ export class SearchService {
 
   }
 
-  getCart(){
+  getCart(): IFood[]{
     return this.cart;
   }
 
