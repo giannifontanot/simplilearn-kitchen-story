@@ -38,8 +38,4 @@ import { InventoryComponent } from './inventory/inventory.component';
 export class AppModule {
 }
 
-// TODO - SEARCH
-// TODO -   select foods and send to the buying table
-// TODO -   present the checkout list on screen
-// TODO - LOGIN
-// TODO -   verify user screen
+
