@@ -1,0 +1,37 @@
+<div class="row cell">
+    <div class="cell col-1">empty</div>
+    <div class="cell col-8">
+        <div class="row cell">
+            <div class="cell col-2"></div>
+            <div class="cell col-1">foodId</div>
+            <div class="cell col-6">foodName</div>
+            ()
+            <div class="cell col-1">price</div>
+            <div class="cell col-2">
+            </div>
+        </div>
+        <form (ngSubmit)="onSubmit()" [formGroup]="inventoryGroup">
+            <div class="row cell">
+                <div class="cell col-2"></div>
+                <div class="cell col-1"><input formControlName="foodId" id="foodId" size="5" type="text"></div>
+                <div class="cell col-6"><input formControlName="foodName" id="foodName" size="25" type="text"></div>
+                <div class="cell col-1"><input formControlName="price" id="price" size="5" type="text"></div>
+                <div class="cell col-2">
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+            </div>
+        </form>
+
+        <div *ngFor="let item of foods" class="row cell">
+            <div class="cell col-2">
+                <button (click)="onDelete(item)" class="btn btn-danger">Delete</button>
+            </div>
+            <div class="cell col-1">{{item.foodId}}</div>
+            <div class="cell col-6">{{item.foodName}}</div>
+            <div class="cell col-1">{{item.price}}</div>
+            <div class="cell col-2"></div>
+        </div>
+
+    </div>
+    <div class="cell col-1">empty</div>
+</div>

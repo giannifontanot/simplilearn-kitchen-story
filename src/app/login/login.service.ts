@@ -14,7 +14,7 @@ export class LoginService {
 
     submitLogin(formValue: any): Observable<any> {
         return this.http.post(this.userUrl, formValue).pipe(
-            tap(data => alert(JSON.stringify(data))),
+            tap(data => data),
             catchError(err => this.handleError(err))
         )
 
