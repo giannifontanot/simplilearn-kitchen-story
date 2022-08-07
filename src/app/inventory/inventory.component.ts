@@ -11,9 +11,9 @@ import {InventoryService} from "./inventory.service";
 })
 export class InventoryComponent implements OnInit {
     inventoryGroup = this.formBuilder.group({
-        foodId: '1',
-        foodName: 'abc',
-        price: '5'
+        foodId: '',
+        foodName: '',
+        price: ''
     })
 
     sub!: Subscription;

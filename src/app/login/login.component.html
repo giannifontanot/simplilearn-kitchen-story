@@ -1,17 +1,31 @@
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header">
+                Shipping
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Admin Login</h5>
 
-    <div>
-        <label for="username">
-            Username
-        </label>
-        <input type="text" id="username" formControlName="username">
-    </div>
-    <div>
-        <label for="password">
-            Password
-        </label>
-        <input type="text" id="password" formControlName="password">
-    </div>
+                <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+                    <div>
+                        <label class="form-label" for="username"></label>
+                        <input class="form-control" formControlName="username" id="username" placeholder="username"
+                               type="text">
+                    </div>
+                    <div>
+                        <label class="form-label" for="password"></label>
+                        <input class="form-control" formControlName="password" id="password" placeholder="password"
+                               type="password">
+                    </div>&nbsp;
 
-    <button class="btn" type="submit">login</button>
-</form>
+                    <div>
+                        <button class="btn btn-primary" type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-4"></div>
+</div>

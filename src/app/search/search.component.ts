@@ -12,7 +12,7 @@ export class SearchComponent implements OnInit, OnDestroy {
     foodsFiltered: IFood[] = [];
     foods: IFood[] = [];
     cart: IFood [] = []
-    listFilter: string = 'apple';
+    listFilter: string = '';
     sub!: Subscription;
 
     constructor(private searchService: SearchService) {
