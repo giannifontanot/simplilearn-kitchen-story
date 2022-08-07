@@ -1,16 +1,53 @@
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+<div class="row">
+    <div class="col-6">
 
-    <div>
-        <label for="name">name</label>
-        <input type="text" id="name" formControlName="name" type="text">
+
+        <div class="card">
+            <div class="card-header">
+                Shipping
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Customer's information</h5>
+
+                <form (ngSubmit)="onSubmit()" [formGroup]="checkoutForm">
+
+                    <div>
+                        <label class="form-label" for="name"></label>
+                        <input class="form-control" formControlName="name" id="name" placeholder="name" type="text"
+                               type="text">
+                    </div>
+                    <div>
+                        <label class="form-label" for="address"></label>
+                        <input class="form-control" formControlName="address" id="address" placeholder="address"
+                               type="text" type="text">
+                    </div>&nbsp;
+
+                    <div>
+                        <button class="btn btn-primary" type="submit">Purchase</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        &nbsp;
+
     </div>
-    <div>
-        <label for="address">address</label>
-        <input type="text" id="address" formControlName="address" type="text">
+    <div class="col-6">
+
+        <div class="card">
+            <div class="card-header">
+                Total: {{cartTotal|currency}}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Cart Content</h5>
+                <p *ngIf="cart.length<=0" class="card-text"> - empty - </p>
+
+            </div>
+
+
+            <ul *ngFor="let food of cart" class="list-group list-group-flush">
+                <li class="list-group-item">{{food.price|currency}} {{food.foodName}}</li>
+
+            </ul>
+        </div>
     </div>
-    <button class="button" type="submit">Purchase</button>
-</form>
-<div>{{cartTotal}}</div>
-<div *ngFor="let food of cart">
-    <h2>{{food.foodName}}</h2>
 </div>
