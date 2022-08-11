@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
         this.loginService.submitLogin(this.loginForm.value).subscribe(
             {
                 next: (data) => {
+                    console.log(data)
                     this.inventoryService.admin = true;
                     this.router.navigate(["/inventory"])
                 },
