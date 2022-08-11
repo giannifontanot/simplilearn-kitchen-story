@@ -11,8 +11,8 @@ basic food items existent in the store's inventory.
 - Kitchen Story
     * [Installation](#Installation)
     * [Usage](#usage)
-    * [API Calls](#API Calls)
-- [🔗 Links](#🔗 Links)
+    * [API Calls](#api-calls)
+- 🔗 Links
     + [GitHub Repository](#github-repository)
     + [Support](#support)
     + [Authors](#authors)
