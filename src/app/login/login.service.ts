@@ -7,7 +7,8 @@ import {catchError, tap} from "rxjs/operators";
     providedIn: 'root'
 })
 export class LoginService {
-    userUrl: string = 'https://62e7b74b93938a545bd79510.mockapi.io/api/v1/users';
+    userUrl: string = 'https://62e8570a249bb1284ead379a.mockapi.io/api/v1/users';
+    putUrl: string = 'https://62e8570a249bb1284ead379a.mockapi.io/api/v1/users/';
 
     constructor(private http: HttpClient) {
     }
@@ -20,6 +21,13 @@ export class LoginService {
 
     }
 
+    changePassword(formValue: any): Observable<any> {
+        return this.http.put(this.putUrl + "/" + formValue.idx, formValue).pipe(
+            tap(data => data),
+            catchError(err => this.handleError(err))
+        );
+    }
+
     handleError(error: HttpErrorResponse) {
         let errorMessage
         if (error.error instanceof ErrorEvent) {
@@ -30,4 +38,5 @@ export class LoginService {
         console.error(errorMessage);
         return throwError(errorMessage);
     }
+
 }

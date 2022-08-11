@@ -3,6 +3,7 @@ import {FormBuilder} from "@angular/forms";
 import {IFood} from "../model/food";
 import {Subscription} from "rxjs";
 import {InventoryService} from "./inventory.service";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'ks-inventory',
@@ -20,9 +21,11 @@ export class InventoryComponent implements OnInit {
     errMsg!: string;
     foods: IFood[] = [];
     result: any;
+    admin: boolean = this.inventoryService.admin;
 
     constructor(private formBuilder: FormBuilder,
-                private inventoryService: InventoryService) {
+                private inventoryService: InventoryService,
+                private router: Router) {
     }
 
     onSubmit(): void {
@@ -78,4 +81,7 @@ export class InventoryComponent implements OnInit {
         this.sub.unsubscribe();
     }
 
+    jumpToLogin() {
+        this.router.navigate(["/login"])
+    }
 }

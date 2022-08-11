@@ -1,6 +1,3 @@
-body {
-    background-color: darkgrey;
-}
 
 .cell {
     border: 1px solid red;
@@ -8,4 +5,9 @@ body {
 
 .cell-gray {
     border: 1px solid lightgray;
+    background-color: white;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+
 }

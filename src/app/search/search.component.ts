@@ -31,7 +31,6 @@ export class SearchComponent implements OnInit, OnDestroy {
     }
 
     search() {
-        ////  alert();
         this.sub = this.searchService.getFoods().subscribe({
             next: data => {
                 this.foods = data

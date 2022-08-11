@@ -3,6 +3,7 @@ import {IFood} from "../model/food";
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {Observable, throwError} from "rxjs";
 import {catchError, tap} from "rxjs/operators";
+import {IOrder} from "../model/order";
 
 
 @Injectable({
@@ -11,7 +12,9 @@ import {catchError, tap} from "rxjs/operators";
 export class SearchService {
     // foodUrl: string = 'api/foods.json';
     foodUrl: string = 'https://62e8570a249bb1284ead379a.mockapi.io/api/v1/foods';
+    postPurchaseUrl: string = 'https://62e8570a249bb1284ead379a.mockapi.io/api/v1/purchase';
     cart: IFood[] = [];
+    order!: IOrder;
     absoluteTotal: number = 0;
 
     constructor(private http: HttpClient) {
@@ -20,6 +23,13 @@ export class SearchService {
     getFoods(): Observable<IFood[]> {
         return this.http.get<IFood[]>(this.foodUrl).pipe(
             tap(data => console.log('All', JSON.stringify(data))),
+            catchError(this.handleError)
+        );
+    }
+
+    postPurchase(order: any): Observable<any> {
+        return this.http.post<any>(this.postPurchaseUrl, order).pipe(
+            tap(data => console.log(JSON.stringify(data))),
             catchError(this.handleError)
         );
     }

@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {SearchService} from "../search/search.service";
 import {IFood} from "../model/food";
 import {FormBuilder} from "@angular/forms";
+import {Router} from "@angular/router";
+import {IOrder} from "../model/order";
 
 @Component({
     selector: 'ks-checkout',
@@ -11,21 +13,43 @@ import {FormBuilder} from "@angular/forms";
 export class CheckoutComponent implements OnInit {
     cart: IFood[] = []
     cartTotal = this.searchService.absoluteTotal
+    checkoutForm = this.formBuilder.group({
+        name: '',
+        address: '',
+        credit: ''
+    });
 
     constructor(private searchService: SearchService,
-                private formBuilder: FormBuilder) {
+                private formBuilder: FormBuilder,
+                private router: Router) {
     }
-  checkoutForm = this.formBuilder.group({
-    name: '',
-    address: ''
-  });
 
     ngOnInit(): void {
         this.cart = this.searchService.getCart()
     }
 
-    onSubmit(){
-      alert('submitted')
+    onSubmit(): void {
+        this.searchService.postPurchase(this.createOrder()).subscribe({
+            next: (data: any) => {
+                const parsed = JSON.parse(JSON.stringify(data))
+
+
+                let retVal = parsed.return
+                console.log(">>> " + retVal)
+                if (retVal === ("OK")) {
+
+                    this.router.navigate(["/purchase"])
+                }
+            },
+            error: err => {
+                console.error(err.message)
+                alert("error: " + err.message);
+            }
+        });
     }
 
+    createOrder(): IOrder {
+        this.searchService.order = {client: this.checkoutForm.value, cart: this.searchService.cart}
+        return this.searchService.order;
+    }
 }

@@ -11,6 +11,7 @@ export class InventoryService {
     urlSave: string = "https://62e8570a249bb1284ead379a.mockapi.io/api/v1/foods";
     urlDelete: string = "https://62e8570a249bb1284ead379a.mockapi.io/api/v1/foods";
     urlGet: string = 'https://62e8570a249bb1284ead379a.mockapi.io/api/v1/foods';
+    admin: boolean = false;
 
     constructor(private http: HttpClient) {
     }
@@ -24,7 +25,7 @@ export class InventoryService {
 
     deleteItem(foodId: number): Observable<any> {
         return this.http.delete(this.urlDelete + "/" + foodId).pipe(
-            tap(data => console.log(JSON.stringify(data))),
+            tap(data => console.log("DELETE: " + JSON.stringify(data))),
             catchError(this.handleError)
         );
     }

@@ -8,7 +8,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {CartComponent} from './cart/cart.component';
 import {CheckoutComponent} from './cart/checkout.component';
-import { InventoryComponent } from './inventory/inventory.component';
+import {InventoryComponent} from './inventory/inventory.component';
+import {PurchaseComponent} from './cart/purchase.component';
+import {ChangeComponent} from './login/change.component';
 
 @NgModule({
     declarations: [
@@ -17,17 +19,22 @@ import { InventoryComponent } from './inventory/inventory.component';
         SearchComponent,
         CartComponent,
         CheckoutComponent,
-        InventoryComponent
+        InventoryComponent,
+        PurchaseComponent,
+        ChangeComponent
     ],
     imports: [
         BrowserModule,
         HttpClientModule,
         RouterModule.forRoot([
+            {path: '', component: SearchComponent},
+            {path: 'search', component: SearchComponent},
             {path: 'login', component: LoginComponent},
             {path: 'inventory', component: InventoryComponent},
-            {path: 'search', component: SearchComponent},
             {path: 'cart', component: CartComponent},
             {path: 'checkout', component: CheckoutComponent},
+            {path: 'purchase', component: PurchaseComponent},
+            {path: 'changePassword', component: ChangeComponent},
         ]),
         FormsModule,
         ReactiveFormsModule

@@ -1,35 +1,46 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder} from "@angular/forms";
 import {LoginService} from "./login.service";
 import {Router} from "@angular/router";
+import {InventoryService} from "../inventory/inventory.service";
 
 
 @Component({
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder,
-              private loginService: LoginService,
-              private router: Router) { }
+    loginForm = this.formBuilder.group({
+        id: '1',
+        username: 'admin',
+        password: 'xadminw'
 
-  loginForm =this.formBuilder.group({
-    username: '',
-    password: ''
+    })
 
-  })
+    constructor(private formBuilder: FormBuilder,
+                private loginService: LoginService,
+                private router: Router,
+                private inventoryService: InventoryService) {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
-  onSubmit() {
-    this.loginService.submitLogin(this.loginForm.value).subscribe(
-        {
-          next: (data) =>{data},
-          error: (err => console.log(err))
-        }
-    )
-this.router.navigate(["/inventory"])
-  }
+    onSubmit() {
+        this.loginService.submitLogin(this.loginForm.value).subscribe(
+            {
+                next: (data) => {
+                    this.inventoryService.admin = true;
+                    this.router.navigate(["/inventory"])
+                },
+                error: (err => console.log(err))
+            }
+        )
+    }
+
+    onChangePassword() {
+        this.router.navigate(["/changePassword"])
+
+    }
 }
