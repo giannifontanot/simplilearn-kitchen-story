@@ -11,6 +11,7 @@ import {CheckoutComponent} from './cart/checkout.component';
 import {InventoryComponent} from './inventory/inventory.component';
 import {PurchaseComponent} from './cart/purchase.component';
 import {ChangeComponent} from './login/change.component';
+import { DemoComponent } from './demo/demo.component';
 
 @NgModule({
     declarations: [
@@ -21,13 +22,15 @@ import {ChangeComponent} from './login/change.component';
         CheckoutComponent,
         InventoryComponent,
         PurchaseComponent,
-        ChangeComponent
+        ChangeComponent,
+        DemoComponent
     ],
     imports: [
         BrowserModule,
         HttpClientModule,
         RouterModule.forRoot([
             {path: '', component: SearchComponent},
+            {path: 'demo', component: DemoComponent},
             {path: 'search', component: SearchComponent},
             {path: 'login', component: LoginComponent},
             {path: 'inventory', component: InventoryComponent},
