@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder} from "@angular/forms";
+import {UntypedFormBuilder} from "@angular/forms";
 import {LoginService} from "./login.service";
 import {Router} from "@angular/router";
 import {InventoryService} from "../inventory/inventory.service";
@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
     })
 
-    constructor(private formBuilder: FormBuilder,
+    constructor(private formBuilder: UntypedFormBuilder,
                 private loginService: LoginService,
                 private router: Router,
                 private inventoryService: InventoryService) {

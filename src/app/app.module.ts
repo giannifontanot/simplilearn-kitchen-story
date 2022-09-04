@@ -11,7 +11,9 @@ import {CheckoutComponent} from './cart/checkout.component';
 import {InventoryComponent} from './inventory/inventory.component';
 import {PurchaseComponent} from './cart/purchase.component';
 import {ChangeComponent} from './login/change.component';
-import { DemoComponent } from './demo/demo.component';
+import {DemoComponent} from './demo/demo.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ToastrModule} from 'ngx-toastr';
 
 @NgModule({
     declarations: [
@@ -28,6 +30,8 @@ import { DemoComponent } from './demo/demo.component';
     imports: [
         BrowserModule,
         HttpClientModule,
+        BrowserAnimationsModule,
+        ToastrModule.forRoot(),
         RouterModule.forRoot([
             {path: '', component: SearchComponent},
             {path: 'demo', component: DemoComponent},

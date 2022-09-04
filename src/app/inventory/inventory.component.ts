@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder} from "@angular/forms";
+import {UntypedFormBuilder} from "@angular/forms";
 import {IFood} from "../model/food";
 import {Subscription} from "rxjs";
 import {InventoryService} from "./inventory.service";
@@ -23,7 +23,7 @@ export class InventoryComponent implements OnInit {
     result: any;
     admin: boolean = this.inventoryService.admin;
 
-    constructor(private formBuilder: FormBuilder,
+    constructor(private formBuilder: UntypedFormBuilder,
                 private inventoryService: InventoryService,
                 private router: Router) {
     }

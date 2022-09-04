@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {SearchService} from "../search/search.service";
 import {IFood} from "../model/food";
-import {FormBuilder} from "@angular/forms";
+import {UntypedFormBuilder} from "@angular/forms";
 import {Router} from "@angular/router";
 import {IOrder} from "../model/order";
 
@@ -20,7 +20,7 @@ export class CheckoutComponent implements OnInit {
     });
 
     constructor(private searchService: SearchService,
-                private formBuilder: FormBuilder,
+                private formBuilder: UntypedFormBuilder,
                 private router: Router) {
     }
 

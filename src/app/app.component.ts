@@ -1,20 +1,27 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {NotificationService} from "./notification/notification.service";
 
 @Component({
-  selector: 'ks-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'ks-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  pageTitle = 'Kitchen Story';
+export class AppComponent implements OnInit {
+    pageTitle = 'Kitchen Story';
 
-  activeTab = 'search';
+    activeTab = 'search';
 
-  search(activeTab: string){
-    this.activeTab = activeTab;
-  }
+    constructor(private notificationService: NotificationService) {
+    }
 
-  result(activeTab: string){
-    this.activeTab = activeTab;
-  }
+    search(activeTab: string) {
+        this.activeTab = activeTab;
+    }
+
+    result(activeTab: string) {
+        this.activeTab = activeTab;
+    }
+
+    ngOnInit(): void {
+    }
 }

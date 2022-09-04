@@ -4,6 +4,8 @@ import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {Observable, throwError} from "rxjs";
 import {catchError, tap} from "rxjs/operators";
 import {IOrder} from "../model/order";
+import {NotificationType} from "../notification/notification.message";
+import {NotificationService} from "../notification/notification.service";
 
 
 @Injectable({
@@ -17,7 +19,7 @@ export class SearchService {
     order!: IOrder;
     absoluteTotal: number = 0;
 
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, private notificationService: NotificationService) {
     }
 
     getFoods(): Observable<IFood[]> {
@@ -47,6 +49,8 @@ export class SearchService {
 
     addToCart(food: IFood) {
         this.cart.push(food);
+        this.notificationService.sendMessage({text: food.foodName + " added to cart", type: NotificationType.success});
+
     }
 
     getCart(): IFood[] {
@@ -59,6 +63,10 @@ export class SearchService {
 
         let index = this.cart.findIndex(foodIdToDelete)
         this.cart.splice(index, 1)
+        this.notificationService.sendMessage({
+            text: food.foodName + " removed from cart",
+            type: NotificationType.error
+        });
     }
 
     getTotal(): number {
